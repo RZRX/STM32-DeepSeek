@@ -1,0 +1,22 @@
+{
+    "project": {
+        "name": "LED Blinky",
+        "mcu": "STM32F407VG",
+        "clock": 168000000,
+        "toolchain": "ARM GCC",
+        "sources": ["main.c", "system_stm32f4xx.c"],
+        "includes": ["CMSIS/Include", "HAL/Inc"],
+        "linkerScript": "STM32F407VG_FLASH.ld"
+    },
+    "debug": {
+        "interface": "ST-LINK",
+        "protocol": "SWD",
+        "speed": 4000
+    },
+    "peripherals": {
+        "GPIO": {
+            "LED_PIN": "PA5",
+            "MODE": "OUTPUT_PP"
+        }
+    }
+}
